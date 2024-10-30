@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 const path = require('path');
 const usuariosPath = path.join(__dirname, '../data/usuarios.json');
 const testePath = path.join(__dirname, '../data/teste.json');
@@ -12,7 +12,7 @@ function writeJsonFile(path, data) {
     fs.writeFileSync(path, JSON.stringify(data));
 }
 
-let userDB = readJsonFile(usuariosPath)
-let testeDB = readJsonFile(testePath)
+let userDB = readJsonFile(usuariosPath);
+let testeDB = readJsonFile(testePath);
 
-module.exports = { userDB, testeDB, readJsonFile, writeJsonFile }
+module.exports = { testeDB, userDB, readJsonFile, writeJsonFile }; // Exportando testeDB corretamente
